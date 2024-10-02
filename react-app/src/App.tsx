@@ -33,9 +33,11 @@
 
 // export default App
 
-import Message from "./Message" //importing Message componet, can be used jsut like an HTML componenet
+import Message from "./Message" 
+import ListGroup from "./components/ListGroup" //importing Message componet, can be used jsut like an HTML componenet
 function App() {
-  return <div><Message></Message></div>
+  return <div><ListGroup></ListGroup></div>
+ 
 }
 
 export default App;

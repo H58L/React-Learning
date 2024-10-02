@@ -6,7 +6,10 @@ import { Component } from "react"
 
 //Use pAscal casing
 function Message() {
-return <h1>Hello World</h1>  //JSX - Jaascript XML is this syntax
+const name = 'Lisa';
+if(name)
+    return <h1>Hello {name}</h1> 
+return <h1>Hello World</h1> //JSX - Jaascript XML is this syntax , write javascript code in {}
 }
 
 export default Message; //export the function to be able to use it in another componenet 
