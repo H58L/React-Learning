@@ -1,0 +1,19 @@
+What is React?
+
+JavaScript Library for dynaimc and user interactive interfaces.
+
+DOM - only changes part reloads, instead of the entire DOM reloading.
+Small reusable, modular and better code.
+Reusable componenets
+
+node modules - libraies
+public - public assests
+src - source code folder
+
+index.html - root = COntainer for Application, entry pint
+package.json - Dependencies and info about project.
+
+tssonfig
+
+.ts - plain typescript files
+.tsx - for react componeneets
