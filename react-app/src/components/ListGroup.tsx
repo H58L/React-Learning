@@ -8,14 +8,18 @@ let items = [
 ]
 
 items = []
-const message = items.length === 0 ? <p>Not item found</p> : null
+
+
+const getMessage = () => {
+   return items.length === 0 ? <p>Not item found</p> : null
+}
 
 function ListGroup()
 {
        
     return <>
         <h1>List</h1>
-        {message}  
+        {getMessage()}  
         <ul className="list-group">
             
         {items.map((item) => (
