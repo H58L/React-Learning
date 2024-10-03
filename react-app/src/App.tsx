@@ -36,7 +36,7 @@
 import Message from "./Message" 
 import ListGroup from "./components/ListGroup" //importing Message componet, can be used jsut like an HTML componenet
 function App() {
-  return <div><ListGroup></ListGroup></div>
+  return <div><ListGroup></ListGroup></div> //each compoent has ot's own state
  
 }
 
