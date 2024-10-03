@@ -7,7 +7,7 @@ let items = [
     'Chirp'
 ]
 
-items = []
+//items = []
 
 
 const getMessage = () => {
@@ -23,7 +23,12 @@ function ListGroup()
         <ul className="list-group">
             
         {items.map((item) => (
-            <li key = {item}>{item}</li>
+            <li 
+            className = "list-group-item" 
+            key = {item}
+            onClick={() => console.log("CLicked")}
+            >
+                {item}</li>
             ))}  
   </ul>
   </>
