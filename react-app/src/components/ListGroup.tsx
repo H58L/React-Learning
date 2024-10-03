@@ -1,17 +1,21 @@
 import { Fragment } from "react";
 
-const items = [
+let items = [
     'New York',
     'Paris',
     'Woff',
     'Chirp'
 ]
 
+items = []
+
 
 function ListGroup()
 {
+       
     return <>
         <h1>List</h1>
+        {items.length === 0 ? <p>Not item found</p> : null}  
         <ul className="list-group">
             
         {items.map((item) => (

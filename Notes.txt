@@ -17,3 +17,12 @@ tssonfig
 
 .ts - plain typescript files
 .tsx - for react componeneets
+
+
+Updating DOM is not made by react, it's done by react-dom
+
+React Native - Platform agnostic, can build, Web, mobile and desktop 
+
+A componenet does not return more than one lement
+
+Fragment - to avoid the jugaad of having to erap multiple eemsnts inside a single div of a component
