@@ -11,7 +11,7 @@ items = []
 
 
 const getMessage = () => {
-   return items.length === 0 ? <p>Not item found</p> : null
+   return items.length === 0 ? <p>Not item found</p> : null ;
 }
 
 function ListGroup()
@@ -19,7 +19,7 @@ function ListGroup()
        
     return <>
         <h1>List</h1>
-        {getMessage()}  
+        {items.length === 0 && <p>No elements</p> }  
         <ul className="list-group">
             
         {items.map((item) => (
