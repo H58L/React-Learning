@@ -1,11 +1,14 @@
+// {items :[], heading: string} , shape of data which will be passed , ie interface
+
+interface ListGroup_Props{  //type of properties
+items: string []; 
+heading: string;
+}
+
+
 import { Fragment, useState } from "react";
 import { MouseEvent } from "react";
-let items = [
-    'New York',
-    'Paris',
-    'Woff',
-    'Chirp'
-]
+
 
 //Hook
 //const [selectedIndex, setSelectedIndex] = useState(-1); //This compoenet has data that will change iver time
@@ -16,9 +19,9 @@ let items = [
 
 
 
-const getMessage = () => {
-   return items.length === 0 ? <p>Not item found</p> : null ;
-}
+// const getMessage = () => {
+//    return ListGroup_Props.items.length === 0 ? <p>Not item found</p> : null ;
+// }
 
 //event handler
 const handleCLick = (event: MouseEvent) =>{
@@ -26,14 +29,14 @@ const handleCLick = (event: MouseEvent) =>{
 console.log(event);
 }
 
-function ListGroup()
+function ListGroup({items, heading}: ListGroup_Props)   //function that gets returned, passing Properties
 {
     //Hook
     const [selectedIndex, setSelectedIndex] = useState(-1); //This compoenet has data that will change iver time   
     return <>
-        <h1>List</h1>
+        <h1>{heading}</h1>
         {items.length === 0 && <p>No elements</p> }  
-        <ul className="list-group">
+    <ul className="list-group">
             
         {items.map((item, index) => (
             <li 
