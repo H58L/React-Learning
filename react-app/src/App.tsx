@@ -37,8 +37,10 @@ import Message from "./Message"
 import ListGroup from "./components/ListGroup" //importing Message componet, can be used jsut like an HTML componenet
 function App() {
   let items = ["New Yo","Paris", "Woff","Chirp"];
-
-  return <div><ListGroup items={items} heading={"Cities"}></ListGroup></div> //each compoent has ot's own state
+  const handleSelectItem = (item: string) => {
+    console.log(item);
+  }
+  return <div><ListGroup items={items} heading={"Cities"} onSelectItem={handleSelectItem}></ListGroup></div> //each compoent has ot's own state
  
 }
 

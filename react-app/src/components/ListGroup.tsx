@@ -3,6 +3,10 @@
 interface ListGroup_Props{  //type of properties
 items: string []; 
 heading: string;
+
+//(item: string) => void
+
+onSelectItem : (item: string) => void;  //onSelectItem is a proerty, anonymous function defined
 }
 
 
@@ -29,7 +33,7 @@ const handleCLick = (event: MouseEvent) =>{
 console.log(event);
 }
 
-function ListGroup({items, heading}: ListGroup_Props)   //function that gets returned, passing Properties
+function ListGroup({items, heading, onSelectItem}: ListGroup_Props)   //function that gets returned, passing Properties
 {
     //Hook
     const [selectedIndex, setSelectedIndex] = useState(-1); //This compoenet has data that will change iver time   
@@ -42,7 +46,9 @@ function ListGroup({items, heading}: ListGroup_Props)   //function that gets ret
             <li 
             className = {selectedIndex === index ? 'list-group-item active' : 'list-group-item'}
             key = {item}
-            onClick={() => {setSelectedIndex(index);}}
+            onClick={() => {setSelectedIndex(index);
+                onSelectItem(item);
+            }}
             >
                 {item}</li>
             ))}  
