@@ -1,14 +1,14 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 
 //making it dynamic by using props
 interface Props_Alert {
-    text: string;
+    children: ReactNode;
 }
 
-const Alert = ({text}: Props_Alert) => {
+const Alert = ({children}: Props_Alert) => {
   return (
     <div className = "alert alert-primary">
-      {text}
+      {children}
     </div>
   )
 }

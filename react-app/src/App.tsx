@@ -43,7 +43,9 @@ function App() {
     console.log(item);
   }
   return <div><ListGroup items={items} heading={"Cities"} onSelectItem={handleSelectItem}></ListGroup>
-  <Alert text={text}></Alert>
+  <Alert>
+    Hello <h1>World</h1>
+  </Alert>
   </div> //each compoent has ot's own state
  
 }
