@@ -30,3 +30,9 @@ Fragment - to avoid the jugaad of having to erap multiple eemsnts inside a singl
 Hooks - Tells react that the value will change over time,hooks can only be called in a componenet function
 
 Props - TO avoid Hardcoding
+
+State v/s Props
+Props - Immuatable, SImilar to function arguments
+State - mutable, similar to lacal variables
+
+Both will cause a re-render
