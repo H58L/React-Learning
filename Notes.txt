@@ -33,6 +33,6 @@ Props - TO avoid Hardcoding
 
 State v/s Props
 Props - Immuatable, SImilar to function arguments
-State - mutable, similar to lacal variables
+State - mutable, similar to local variables
 
 Both will cause a re-render
