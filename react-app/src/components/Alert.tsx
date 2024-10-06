@@ -3,13 +3,16 @@ import React, { ReactNode } from 'react'
 //making it dynamic by using props
 interface Props_Alert {
     children: ReactNode;
+    onClose: () => void;
 }
 
-const Alert = ({children}: Props_Alert) => {
+const Alert = ({children, onClose}: Props_Alert) => {
   return (
-    <div className = "alert alert-primary">
+    <div className = "alert alert-primary alert-dismissible">
       {children}
+      <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close" onClick={onClose}></button>
     </div>
+
   )
 }
 

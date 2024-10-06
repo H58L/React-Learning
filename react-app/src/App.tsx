@@ -33,11 +33,16 @@
 
 // export default App
 
+import { useState } from "react";
 import Message from "./Message" 
 import Alert from "./components/Alert";
 import Button from "./components/Button";
 import ListGroup from "./components/ListGroup" //importing Message componet, can be used jsut like an HTML componenet
+
+
 function App() {
+
+  const [alertVisisble, setAlertVisiblity] = useState(false);
   let items = ["New Yo","Paris", "Woff","Chirp"];
   let text = "Hello World"
   const handleSelectItem = (item: string) => {
@@ -45,10 +50,8 @@ function App() {
   }
   return <div>
     <ListGroup items={items} heading={"Cities"} onSelectItem={handleSelectItem}></ListGroup>
-  <Alert>
-    Hello <h1>World</h1>
-  </Alert>
-  <Button onClick={() => console.log("clicked")} color="primary"> Primary Button </Button>
+  {   alertVisisble && <Alert onClose={() => setAlertVisiblity(false)}>My Alert</Alert>} 
+  <Button onClick={() => setAlertVisiblity(true)} color="primary"> Primary Button </Button>
   <Button onClick={() => console.log("clicked")} color="secondary">Secondary Button </Button>
   <Button onClick={() => console.log("clicked")} color="success">Success </Button>
   <Button onClick={() => console.log("clicked")} color="danger">Danger </Button>
